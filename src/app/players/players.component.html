@@ -1,0 +1,11 @@
+<h2>Reserves</h2>
+<ul class="player-list" >
+  <li class="player-item" [class.selected-player]="player===selectedPlayer" *ngFor="let player of players" (click)="onSelect(player)">
+    <div class="badge">
+      {{player.jerseyNumber}}
+    </div>
+    {{player.name}}
+  </li>
+</ul>
+
+<app-player-detail-component [player]="selectedPlayer"> </app-player-detail-component>
